@@ -17,6 +17,7 @@ of(
 
 
 
+
 // преобразование в массив их значений
 /*
  const source$ = new Observable<{ id: string; value: string; }>((observer) => {
@@ -41,5 +42,21 @@ source$
     complete: () => console.log('complete')
 });
  */
+
+
+
+// преобразование потоков в массив
+/* 
+const array = [
+  {id: '1', value: 'Hello'},
+  {id: '2', value: 'World'},
+  {id: '3', value: 'ffff'},
+]
+
+const source$ = of(array)
+source$.pipe(
+  toArray()
+).subscribe((x) => console.table(x)) 
+*/
 
 
